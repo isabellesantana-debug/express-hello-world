@@ -67,6 +67,9 @@ app.get('/externo', async (req, res) => {
   } catch (error) {
     res.status(500).json({ erro: 'Erro interno ao tentar consumir a API externa', detalhe: error.message });
   }
+
+
+  
 });
 
 app.listen(port, () => {
