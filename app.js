@@ -114,3 +114,19 @@ app.post('/series', (req, res) => {
 app.get('/bug', (req, res) => {
   throw new Error('Simulação de bug em produção');
 });
+
+
+
+app.get('/externo', async (req, res) => {
+  try {
+    const response = await fetch('https://typicode.com');
+    const dados = await response.json();
+    
+    res.json({
+      origem: "API Externa",
+      dados: dados
+    });
+  } catch (error) {
+    res.status(500).json({ erro: 'Erro ao conectar na API externa' });
+  }
+});
