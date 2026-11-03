@@ -69,7 +69,7 @@ app.get('/externo', async (req, res) => {
   }
 
 
-  
+
 });
 
 app.listen(port, () => {
@@ -79,4 +79,9 @@ app.listen(port, () => {
 
 app.get('/meunome', (req, res) => {
   res.send('Meu nome é Isabelle Santana'); 
+});
+
+
+app.get('/tico', (req, res) => {
+  res.send('teco');
 });
