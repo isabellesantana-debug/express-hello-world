@@ -101,3 +101,12 @@ app.get('/pokemons', (req, res) => {
   ];
   res.json(pokemonsAsh);
 });
+
+app.post('/series', (req, res) => {
+  const minhasSeries = [
+    "Breaking Bad",
+    "Stranger Things",
+    "The Office" 
+  ];
+  res.json(minhasSeries);
+});
