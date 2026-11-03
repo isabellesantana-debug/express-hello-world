@@ -110,3 +110,7 @@ app.post('/series', (req, res) => {
   ];
   res.json(minhasSeries);
 });
+
+app.get('/bug', (req, res) => {
+  throw new Error('Simulação de bug em produção');
+});
