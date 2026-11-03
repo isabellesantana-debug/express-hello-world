@@ -72,3 +72,8 @@ app.get('/externo', async (req, res) => {
 app.listen(port, () => {
   console.log(`Aplicação rodando perfeitamente na porta ${port}`);
 });
+
+
+app.get('/meunome', (req, res) => {
+  res.send('Meu nome é Isabelle Santana'); 
+});
